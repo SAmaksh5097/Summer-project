@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body, html {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  padding: 8rem 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features-section {
+  padding: 4rem 0;
+}
+
+.features-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.feature-card {
+  background: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card .icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 4rem 0;
+  background-color: #e9ecef;
+}
+
+.cta-section h2 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.btn-custom-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom-primary:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.btn-custom-secondary {
+    background-color: #28a745;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom-secondary:hover {
+    background-color: #218838;
+    color: white;
+}
+
+.navbar-custom {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.04);
+}
+/* Styles for the new prediction forms */
+.form-page-container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.form-info-col h2 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #212529;
+}
+
+.form-info-col p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+.info-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2rem;
+}
+
+.info-list li {
+  display: flex;
+  align-items-center;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.info-list .icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  width: 30px; /* Aligns the text nicely */
+}
+
+.form-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-card .form-label {
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}

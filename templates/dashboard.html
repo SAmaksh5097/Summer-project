@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-4">
+    <div class="text-center mb-5" data-aos="fade-up">
+        <h2>Market Dashboard</h2>
+        <p class="lead">Visual insights from our vehicle dataset.</p>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 mb-4" data-aos="fade-right" data-aos-delay="100">
+            <div class="card">
+                <div class="card-header">Average Price by Brand (Top 10)</div>
+                <div class="card-body"><canvas id="priceChart"></canvas></div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4" data-aos="fade-left" data-aos-delay="200">
+            <div class="card">
+                <div class="card-header">Vehicles by Fuel Type</div>
+                <div class="card-body"><canvas id="fuelChart"></canvas></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const companyLabels = {{ company_labels|tojson }};
+    const priceValues = {{ price_values|tojson }};
+    const fuelLabels = {{ fuel_labels|tojson }};
+    const fuelValues = {{ fuel_values|tojson }};
+    const textColor = 'rgba(233, 236, 239, 0.8)';
+    const gridColor = 'rgba(255, 255, 255, 0.1)';
+    const priceCtx = document.getElementById('priceChart').getContext('2d');
+    new Chart(priceCtx, {type: 'bar', data: {labels: companyLabels, datasets: [{label: 'Average Price (in Lakhs)', data: priceValues, backgroundColor: 'rgba(52, 152, 219, 0.7)', borderColor: 'rgba(52, 152, 219, 1)', borderWidth: 1}]}, options: {indexAxis: 'y', scales: {x: {beginAtZero: true, ticks: {color: textColor}, grid: {color: gridColor}}, y: {ticks: {color: textColor}, grid: {color: gridColor}}}, plugins: {legend: {labels: {color: textColor}}}, responsive: true}});
+    const fuelCtx = document.getElementById('fuelChart').getContext('2d');
+    new Chart(fuelCtx, {type: 'pie', data: {labels: fuelLabels, datasets: [{label: 'Number of Vehicles', data: fuelValues, backgroundColor: ['rgba(231, 76, 60, 0.7)', 'rgba(52, 152, 219, 0.7)', 'rgba(241, 196, 15, 0.7)', 'rgba(26, 188, 156, 0.7)', 'rgba(155, 89, 182, 0.7)']}]}, options: {plugins: {legend: {labels: {color: textColor}}}, responsive: true}});
+</script>
+{% endblock %}

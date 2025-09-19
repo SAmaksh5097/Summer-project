@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="px-4 py-5 text-center" data-aos="fade-up">
+    <h1 class="display-4 fw-bold">ML-Powered Vehicle Valuations</h1>
+    <div class="col-lg-8 mx-auto">
+        <p class="lead mb-4">Get transparent, data-driven insights for your next vehicle purchase or sale. Our platform provides fair market valuations for both buyers and sellers, helping you make smarter decisions.</p>
+        <hr class="my-5">
+        <div class="row">
+            <div class="col-md-6 mb-3" data-aos="fade-right" data-aos-delay="200">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column text-center p-4">
+                        <h3 class="card-title">For Sellers</h3>
+                        <p class="card-text">Get an instant valuation and compare it to your asking price to understand your vehicle's true market worth.</p>
+                        <div class="mt-auto pt-3">
+                            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                                <a href="{{ url_for('car_form') }}" class="btn btn-success btn-lg px-4">Value My Car</a>
+                                <a href="{{ url_for('bike_form') }}" class="btn btn-outline-secondary btn-lg px-4">Value My Bike</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3" data-aos="fade-left" data-aos-delay="200">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column text-center p-4">
+                        <h3 class="card-title">For Buyers</h3>
+                        <p class="card-text">Browse our inventory and see the seller's price next to our fair market valuation to find the best deals.</p>
+                        <div class="mt-auto pt-3">
+                             <a href="{{ url_for('buyer_dashboard') }}" class="btn btn-primary btn-lg">Browse Vehicles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container px-4 py-5" id="features">
+    <h2 class="pb-2 border-bottom text-center" data-aos="fade-up">Why Choose Our Platform?</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="col d-flex align-items-start" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-primary flex-shrink-0 me-3 fs-2"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cpu" viewBox="0 0 16 16"><path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14A2.5 2.5 0 0 1 11.5 14v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0m-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"/></svg></div>
+        <div> <h4 class="fw-bold mb-0">Accurate ML Predictions</h4> <p>Our platform uses a sophisticated machine learning model to provide the most accurate and fair market valuation for your vehicle.</p> </div>
+      </div>
+      <div class="col d-flex align-items-start" data-aos="fade-up" data-aos-delay="200">
+        <div class="text-primary flex-shrink-0 me-3 fs-2"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-bar-chart-line" viewBox="0 0 16 16"><path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1zM2 13v-3h2v3zm4 0V7h2v6zm4 0v-6h2v6z"/></svg></div>
+        <div> <h4 class="fw-bold mb-0">Data-Driven Insights</h4> <p>Explore our market dashboard to see real-time trends, average prices, and popular vehicle types. Make decisions based on data, not guesswork.</p> </div>
+      </div>
+      <div class="col d-flex align-items-start" data-aos="fade-up" data-aos-delay="300">
+        <div class="text-primary flex-shrink-0 me-3 fs-2"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16"><path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/><path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/></svg></div>
+        <div> <h4 class="fw-bold mb-0">Transparent Deal Analysis</h4> <p>We instantly compare asking prices to our AI valuation and tell you if it's a great deal, a fair price, or has room for negotiation.</p> </div>
+      </div>
+    </div>
+</div>
+{% endblock %}
